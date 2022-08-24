@@ -20,15 +20,19 @@ let getData = () => {
         };
     };
     if (count == 0) {
-        window.location.href='email-done.html'; 
-        localStorage.setItem('email_data', JSON.stringify(obj));
-         
+        localStorage.setItem('email_data', JSON.stringify(obj)); 
+        nextPage(); 
+        //console.log('hi');     
     }
     else {
-        alert('Sorry, but please give each information to go to the next page'); 
+        alert('Sorry ! Please give each information to go to the next page.'); 
     };
     
    // console.log('hi');
+};
+let nextPage = () => {
+    console.log('hi');
+    window.location.href = 'email-done.html';
 };
 
 
