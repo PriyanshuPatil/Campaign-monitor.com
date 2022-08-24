@@ -1,0 +1,77 @@
+body{
+    margin-left: -10px;
+    margin-right: -20px;
+}
+#navbar{
+    height: auto;
+    margin-top: -10px;
+    padding: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: -100;
+    display: flex;
+    font-family: 'Graphik Web',Helvetica,sans-serif;
+    background-color: rgb(31, 22, 33);
+
+
+ }
+ #nav-11{
+    display: flex;
+    width: 97%; 
+    margin: auto;
+    justify-content: space-between;
+ }
+#nav-div{
+    margin: auto;
+    margin-left: 0px;
+}
+
+#nav-div{
+display: flex;
+color: white;
+gap: 35px;
+color:aquamarine ;
+}
+#logo>img{
+width: 25px;
+margin-top: -5px;
+}
+#nav-div>div>a{
+text-decoration: none;
+color:aquamarine ;
+} 
+#nav-div>div>a:hover {
+color:rgba(173, 170, 185, 0.959);
+} 
+#nav-button{
+display: flex;
+gap:15px;
+color: white;
+}
+#nav-button>div{
+margin: auto;
+color:aquamarine ;
+}
+#nav-button>button{
+margin: auto;
+padding: 5px 20px 5px 20px;
+background-color: blue;
+font-size: 12px;
+border-radius: 30px;
+font-weight: 500;
+font-weight: 400;
+color: white;
+
+}
+#nav-button>div>a{
+margin: auto;
+color:aquamarine ;
+text-decoration: none;
+}
+
+#nav-button>button:hover {
+background-color:rgb(203, 144, 203);
+}
+#nav-button>div>img{
+width: 30px;
+} 
