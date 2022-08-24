@@ -1,0 +1,46 @@
+  *{
+    font-family: sans-serif;
+  }
+
+  #box-1 {
+    text-align: center;
+  }
+
+  #box-1 > p {
+    font-size: 20px;
+  }
+
+  #btn-left > a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #btn-right > a {
+    color: #111324;
+    text-decoration: none;
+  }
+
+  #btn-left {
+    background-color: #7856ff;
+    padding: 25px 45px;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    border-radius: 3px;
+    border: #7856ff;
+    font-weight: 500;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  #btn-right {
+    padding: 25px 45px;
+    background: #51cfdb;
+    margin: 10px 20px;
+    border-radius: 3px;
+    border: #51cfdb;
+    font-weight: 500;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,97 @@
+*{
+    font-family: sans-serif;
+}
+#main{
+    /* border: solid red 5px; */
+    display: flex;
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    
+}
+#main>div{
+    width: 47%;
+    height:800px;
+    margin: auto;
+    border: 1px solid green;
+}
+.box1{
+    /* border: solid red 5px; */
+    /* width:600px ;
+    height: 240px;
+    margin-top: 50px;
+    margin-left: 100px; */
+    display: flex;
+    flex-direction: column;
+}
+#name{
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+}
+#last{
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+}
+#email{
+    margin-top: 20px;
+    width: 320px;
+    height: 30px;
+    margin-left: 10px;
+}
+#company{
+    margin-top: 20px;
+    width: 320px;
+    height:30px;
+    margin-left: 10px;
+}
+#no{
+    margin-top: 20px;
+    width: 320px;
+    height: 30px;
+    margin-left: 10px;
+}
+#box{
+    margin-top: 20px;
+    width: 320px;
+    height: 20px;
+}
+#btn{
+    margin-top: 20px;
+    width: 260px;
+    height: 30px;
+    margin-left: 10px;
+}
+img{
+
+}
+h1{
+font-size:45px;
+}
+p{
+
+}
+
+  /* div-right */
+#container{
+    /* border:solid red 5px; */
+}
+#right{
+    /* padding: 23px 45px;
+    height: 450px;
+    width: 600px;
+    margin-bottom: 500px;
+    margin-left:600px; */
+}
+#right1{
+    /* padding: 23px 45px;
+    height: 450px;
+    width: 600px;
+    margin-bottom: 500px;
+    margin-left:600px; */
+}
+
+
