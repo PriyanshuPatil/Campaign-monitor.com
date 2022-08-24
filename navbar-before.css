@@ -1,0 +1,82 @@
+body{
+    margin-left: -10px;
+    margin-right: -20px;
+}
+#navbar{
+    height: auto;
+    margin-top: -10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: -100;
+    font-family: 'Graphik Web',Helvetica,sans-serif;
+    background-color: rgb(31, 22, 33);
+
+ }
+  #features{
+    background-color: rgb(31, 22, 33);
+    color: white;
+    font-size: 17px;
+    width: 17%;
+    border: 0px;
+  }
+
+#nav-div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-left: 0px;
+}
+#logo{
+margin: auto;
+
+}
+#nav-mid{
+display: flex;
+color: white;
+gap: 25px;
+margin: auto;
+color:aquamarine ;
+}
+#nav-mid>select{
+color:aquamarine ;
+}
+#nav-mid>div:hover {
+color:rgba(173, 170, 185, 0.959);
+} 
+#nav-mid>select:hover {
+color:rgba(173, 170, 185, 0.959);
+} 
+#nav-button{
+display: flex;
+gap:25px;
+color: white;
+}
+#nav-button>div{
+margin: auto;
+color:aquamarine ;
+}
+#nav-button>button{
+margin: auto;
+padding: 10px;
+background-color: plum;
+font-size: 18px;
+border-radius: 10px;
+font-weight: 500;
+
+}
+#nav-button>div>a{
+margin: auto;
+color:aquamarine ;
+text-decoration: none;
+}
+#nav-button>div>a:hover {
+color:rgba(173, 170, 185, 0.959);
+} 
+#nav-button>button:hover {
+background-color:rgb(203, 144, 203);
+} 
+#hello{
+width: 100;
+height: 3000px;
+background-color: green;   }
