@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make your email</title>
+    <link rel="stylesheet" href="./styles/email_builder.css">
+    <script src="https://kit.fontawesome.com/8c2f4761e6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="email-builder">
+
+        <form>
+            <div class="input-group">
+                <input type="email" id="sender-email" required>
+                <label for="sender-email"><i class="fa-solid fa-envelope"></i> Your Email Id</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="reciever-email" required>
+                <label for="reciever-email"><i class="fa-solid fa-envelope"></i> Reciever's Email Id</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="subject" required>
+                <label for="subject"><i class="fa-solid fa-pen-nib"></i> Subject</label>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                   <input type="text" id="name" required>
+                   <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                </div>
+                <div class="input-group">
+                   <input type="tel" id="number" required>
+                   <label for="number"><i class="fa-solid fa-phone-square-alt"></i> Phone no.</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <textarea id="message" rows="10" required></textarea>
+                <label for="message"><i class="fa-solid fa-message"></i> Your Message</label>
+            </div>
+            <button  onclick="getData()"> SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+            
+        </form>
+
+    </div>
+    
+</body>
+</html>
+<script src="./scripts/email_builder.js"></script>
+<!-- onclick="debounce(getData,5000)" -->
