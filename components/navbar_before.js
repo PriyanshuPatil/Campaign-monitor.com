@@ -72,7 +72,9 @@ function navbarAfter(){
 
 
 
-export {navbarBefore,navbarAfter}  ;
+
+
+export default navbarBefore  ;
 
 
 
@@ -92,40 +94,17 @@ export {navbarBefore,navbarAfter}  ;
 
 
  // 3 :------copy paste in script file
+ 
 {/* <script type="module">
  
- import navbarBefore from './components/navbar.js' ;
+ import navbarBefore from './components/navbar_before.js' ;
  let container=document.getElementById("navbar_container") ;
  container.innerHTML=navbarBefore() ;
  console.log(container)
-</script> */}
- 
+</script>
+
+ */}
 
 
 
 
-
-
-
-//for after
-
- // 1:------copy paste in head 
-{/* <link rel="stylesheet" href="./navbar-after.css"> */}
-
-
-
- // 2 :------copy paste in body top
-{/* <div id="navbar_container"></div>  */}
- 
-
-
-
- // 3 :------copy paste in script file
-{/* <script type="module">
- 
- import navbarBefore from './components/navbar.js' ;
- let container=document.getElementById("navbar_container") ;
- container.innerHTML=navbarAfter() ;
- console.log(container)
-</script> */}
- 
