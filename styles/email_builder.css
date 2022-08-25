@@ -61,6 +61,26 @@ button:hover {
     width: 100%;
     cursor: pointer;
 }
+.button2{
+    margin-top: 30px;
+    width: 30%;
+}
+.button2:hover{
+    padding: 10px 0;
+    color: black;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.946);
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 30px;
+    width: 30%;
+}
+#next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 input:focus~label,
 input:valid~label,

@@ -13,27 +13,29 @@ let getData = () => {
         
     };
     
-    let count = 0;
+    let count = false;
     for (let key in obj) {
         if (obj[key]=='') {
-            count++;
+            count=true;
         };
     };
-    if (count == 0) {
+    if (count == false) {
         localStorage.setItem('email_data', JSON.stringify(obj)); 
-        nextPage(); 
+        window.location.href = '/email-done.html';
+         
         //console.log('hi');     
     }
     else {
-        alert('Sorry ! Please give each information to go to the next page.'); 
+        swal('Sorry !',' Please give each information to go to the next page.','warning'); 
     };
     
    // console.log('hi');
 };
+
 let nextPage = () => {
-    console.log('hi');
-    window.location.href = 'email-done.html';
+    window.location.href = '/email-done.html';
 };
+
 
 
 
