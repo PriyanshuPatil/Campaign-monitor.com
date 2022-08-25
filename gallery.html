@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="./navbar-before.css">
 </head>
 <body>
+    <div id="navbar_container"></div>
     <div class="container">
         <h1>Introducing the 97 top email <br> marketing campaign <br> examples and designs.</h1>
         <p>We’ve curated a selection of the most inspiring and effective email marketing campaigns sent.</p>
@@ -31,3 +33,10 @@
 </body>
 </html>
 <script src="gallery.js"></script>
+<script type="module">
+ 
+    import navbarBefore from './components/navbar_before.js' ;
+    let container=document.getElementById("navbar_container") ;
+    container.innerHTML=navbarBefore() ;
+    console.log(container)
+   </script>

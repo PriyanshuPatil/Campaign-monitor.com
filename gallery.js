@@ -1,635 +1,144 @@
 let cards_data = [
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
+    {   img:'data:image/jpeg;base64,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',
         title:'Jaybird',
         p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Rip Curl',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'SXSW',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'on',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Flume',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Monica Vinader',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Drake Hotel Properties',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Chatbooks',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'GlamCorner',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:`The Royal Children’s Hospital Foundation`,
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
+     {   img:'data:image/jpeg;base64,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',
         title:'Jaybird',
         p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Rip Curl',
+     {   img:'data:image/jpeg;base64,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',
+        title:'Jaybird',
         p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'SXSW',
+     {   img:'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRgWFRYZGBgaHBocHBwcGhwaGh4fGhgeGhoaHBweIS4lHSErHxwcJzgmKy8xNTU1HCQ7QDs0Py40NTEBDAwMEA8QHhISHjQrJCU0NDQ0NDE2MTQ0NDExMTY0NDY1NDQ0NDQ0NDQ0MTE0NDQ0NDQ0NDQ0NDQxNDQ0NDQ0NP/AABEIARMAtwMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAAAQIDBAUGB//EADQQAAEDAgQEBQQCAgIDAQAAAAEAAhEhMQNBUWEScZHwBIGhscEFItHxMuETQgZSI2KyFP/EABkBAQEBAQEBAAAAAAAAAAAAAAABAgMEBf/EACcRAQEAAgICAQQBBQEAAAAAAAABAhEDIRIxQVFhcYEiBDKRofAU/9oADAMBAAIRAxEAPwD8xQmmRai24lKbTyUhVHfmgB3eiSCITjVESnnVUW2UkIGG6pOKbL/3XqiPIIBw8qwkE9u+6JILe0AkNMgEw4i4mh4axSsSVmqIIrv6iP6ShCACuiSZNUFFJOUyNJj1ukiknKSEAhCEDaJ/pJMhJBRy73QVUd+0JSqykBAT4VUdx3KibLzQ1VE2B18unqhjiCCLgyOeozGSpSP47lEiKzM+nJM2MUHXvNS6p76SiqYwk0E1jrb5Pkp9k+HMp8Gu3mghwQdtuufrKqBT16/pECBrJ6Uj56dYJG4QRreqpxnp33smy4i+Wm17oM0A9/lW1lzpH670SBQIjv45pOVMvJEjMWppOSkBFBOqJQCh5M1vvdAkBCZCKSEFCCzbvdNCbGk27gSfQKsmLWkqSqc2KexBFpuE7ZfjyRE8PcIj2noJVBthCAKwe+ygbmGuYFJFr6oItM5Z5ZZUTJoKEmkSZGc03+3pnNFHkZKBChqJvTmL880GYrrpsM/jfcoLfj9d6KiSQJPkIyHDMCx+0STU0vdBm4UnOukbes+iYaDcxfKlLDz+UC6ZoN/3MqKQZOcUJrsPc25lSnP7qkUChPi2r5R0hXx1BGVsxStjII2KlsixgifbdBHd0E6U/tMqnEm80EDysPeqCCOX4hKE4SQOKW7ySAQAiEUkKuKkd+XVCK0I77shwzKc9Lxrl8lUW356c8+irKE3BMQn60j176oFemlc0CnmFTG7jv5ojhIzuO+SIRZeaGlMzKAK0F6Cuu6AJTff8WQBo4S0SDVpmCQaggVG8RnCk/rSO4VkSTlc12ExOc/KROt/jl19EUPub5Z552vX4SIj378lTWcRAA2oNSYz7hTNI5+sfhBETl0QSaDS3fkt8T/UmKtsAAIH2tJi5kTWp85WcH+R5Xk2p7eSgz4UOOnrXKqoHOajv4QAggjfVBComUkCJrTokdlbYzzz06KSZv8AhFTskFYnLl1SeRkIoM5yqfM1QST37/CERW/mhFbtF/yIoa+ivDNyYi0VmoMHkIzKzaFYt/XyjFItTAQCq4TFM8tY94hUNrBBJIyEQZNCaGIyjzClsZ1oduX5QdI36U/KGhATHmIt59lBbeKjVaOMkk1Mct5pbSN1Db3QAY2bwJpQzEmveqYofurfMaRcgqmPI1FDBG4LT5RIjmpa20jcchz5IqAO/VVVxuSc/Lc0iAhkSJny5U9U3B3IGDaljHoSghwg0959VMKg1MtoDzpWloOlZ9FAnN+EuKBnOddRH5HmqExe0CJ1kimgj13SaNJk06ioQTG4m0fMobSsa6GKaed0wfLXyskSggAZ+6QC04Lb602ScD8Xm3wikWkCudQK9Rksyr9q9YiUoRUltYuhViNHtn7+qERqI9NM452lMnp6UU/jv8q203sdK/0SiCh25Zp8j03RyTIVA0zNqjPatNLR5qmOIgjLUSLVoRCbQb656zPX+k3S0mCQZIIFLH8j0QZQqA1F7df2tS/ijicXHOSb5X2AUZEa/CIl8wJF7chNtp9k3ARlPYr09UBvfVNzY6fN1FSDsM/UX8kuGBM1k0rSIgzY3PRNx9u/RDq+WfnE9SECk1O1Ypfb4CTgaE8+df30Wjm6SYnlFI+b7JPbAByM6ZfsIIII+2M7ZzbsJsaZmeEioM8JpWm6HfqqHMIaHZGY8r97oJc0gVEGnQiQpNt+7Kgw6V2Q2JrZFQW0lViNMAGsDpJqDRAaTTz6CfZKCYAFbUuZsgjSewnEkwLmw52E1QQkAJrZBBTVN5T1+ChFXCsRStfz369UyM9Om++fVU1vPdGROiFTIpPYVlgGdZrtyKJSv+1TyYE7msVne6C07W2oMpjNAYigSRFL7T+e9kcMxb9BMMpTLlHcoAAGs5aIIaNfyqe3QGO5TZQ+RFdwgD0tbmghjZp5QkWj3r359VpwmbRb2vVEQQRBz9c+nqggDpPsNdfypEwaGw8tCeseasNUkV5W65IJPQad+aXDkdvVbHYU62ipAUOMgWzOU1i5Fcrb7oqA2bBS4eSs080NFRImokaoIiiXsrmZNK7anKFIQQQg5+yrJDtSZPc/CKzhCZ1Qg14iqCfD8+6pwRlTRQ3+Jv7IFYE7Cecn3Q0K20pNNu+SBFhaR6Zg13uENCpwGVspqRtMKmjKtUNIcD3yT4P6sO81o2h3kdBr6USj3RZENNIj+tx0z1KCzpN1s1h0G/maSTYUuFJGsc65cqV+EXTJ7d/WVQbMR/KQAGgySfmyhmO0mk3pyvJWwbUVrlHUcqoaYAd6IDRMgUBz00nVakU9Oef46IeZJ5zMnWZE/KGmAEHPQpBs0AqtXXreuZvqo4df2i6S9sHUapMmaZVtNq20TI1Ty5oaZQmbVGle+6K2tE1oNtNlDvRDRueIFy7WZEZAC4hZtbOy0DXOMNBLjSGittAoa3nHpXNESG55ZxcZe5CSpwGVIA65poNmCoVPqdENatQ2KaxBRlOG0WNyRyHP09VRbE56G2cTGXJNjB+FUI1IkNSc8NEnLui04V53jnEuiaWj+lF06MXE4WA2JFuYy1ot8OS0Tf8AFMvhediPcQ0WjyXpeHaAIB1RYpwAFac9Fy+IxxwubpA60cPlbePJ4f5VkAib7V8l473GxSFa+HFRT95Luw8aXFtJApGZzXFguIggxTaSM4nP8KMIniHDee/hUj2eAQCZOu1TQeQUFvp+pWzWUv3opLRG8+QHfsoumJtChb8I3+Mv79FDmqozOkb6m1p0QW7yK9zCo2Uvht6d0U2IUnRbcPL49FDxVUZFqTxQa1nrktT3kVBaiM3N2iahCZahEdToAr1WeDjcbzAhotN+q5PEY5dSw99O910fTGGSdlK1I7pPe1EAKuIAwdCfKi5sB44XOdEExmKCgUGGN41/E6aTOUU26LiLiXSVeM9xoTMZaflRhXmJhaRszh4qmg1k+UjZelh4zAxz2tga6maD5XFgPjDeQRLncJBE0iaaZrHEcSAzJumpuTqstRXicSeEg1I+4b/2uUrR1XRpTSyzVjNUVWBfvv8AakmR3tCrDOw88t0XT2fDY4eIAgih75QtorovM8BigED/ALGp2qA3qQvYLFm9NTuMS1QR5rdzEnMTZWBZ3lRR43CHATQ1Fa/K6OHqsPFuAYQc91MvTXHrfbm8M8uFcqAxplufytTT2XF4fHhwni4dAtfFWcBUCCTflyV38MePVrdzSJBpqKj0WcbJ+Gxi+9+8lcZLSMHEAiRN/wCvlCrGw+IIQee0Su/wz+ACSRckbRQ9Vy4bDO/XKyfiCSd4E+yxbuusx1jvTUYp4XO/2xPtGdLH3S8X4inALNiupF1DjLgLcIgC9QPkrnJzW3Kk5aMfwihuKiN1mtNABeNEqR1OY0MaCa3JBECTEGk+fNcrCATPe618RhEGCfuiTYchSiwoo13KTikmQktM1s1gisHSOWf6WQE2QGk0An1TaSKjOR+VF26vp7y14cCZAMQJqQQBtUr6QYa+c8CC5xaIBLXVJiAGmgqJJX0n02HMAFeGk1sLVN1zyy706449bS5iksQPFf8AmOGRYCP/AKI5V911Fizs8duFzFx/UHgNtNfULqd4oB/AQSS4AdN9I9V5njzwudBIJNt5Ty301MdS1509NEB99CtWu/kCJJjXWpWZFV0lcrCw3wQV2YuKYa8XBIPK8LgK3YSW8OQMrVYjXAxZe6sA1CFymnkmqu27S/Jpk92Sl0yaAR6LPDfBqSqxMaZ9Fy1du3lj4+6k4t//AGvT2WboyTaKImq6OVJoXS0/x/0IEzMzpGi520rWQujAa5zgTaYNhZZyrWGO+hjML3UruJrTRSzCPFEa3EgUuU3GTQkZ7VXRhng4i1wJgiZiJMG95E03WblZHWY427YPwWgTxCsG0HOluXVc7oy1VYoqZpaN9D0UNbUSYW8fXbjld3UjfDLQc7H21hQKhotE1vvJ0y6JOZGY2oY9e6LTDxOERNLkZeql+yybuq1wnMYCSS51QIJAkihkXGo5L2/ojw1hLj/Fpkk2rNN5MRsF4eDhteS57g1oE0FTFgIEVTf4olgYKN0itDr3mudnldT9us/jN39BviTxl5MmZ3paq97H+oN+0E8PG01vEih5L5eUg8yK2st3HblMtPUkh7SR/ExSnmBoRosfqmJJmI0rut8eOKT9hzBv5VO1lyeKYXS8mlIkiYnQW5brjhd2WvRyzWNkcxMpSbSlKYIzXp08mw4ckmOgqy0RN1ACBl2SaTShU06XsIYAQRPmCsxgiJLha2aMTELjMQNNgsnlc8ZXXO4+9EAm1tYFJp1Sa5MuW3KabYLgAZBdmMo3WvhuJv3wIisiQZKyZhP4OKYBPDe8xQ9V6o8Pxsa1nEPuDXkuBGVmCJFz5LhyZzH8V6+Hjyy/MnX3eQ90nTl+1nwGJill72N4LAYw8OLxvAdIIEUkABsZmLlcvHhcDWcPG8vJIaCDwgEATlNDA0Ux5pZ1L/gy/p7P7rJ+3mNsYHmhjS4wLmiMQXIEAkwJtseqQFYmN/0u/wAPL86a42HwtBDgZ67yMq9VbfDuLeMWHfnUrLGwS2JN+wtsJwaPuryMRUGsjuixbddV1xk8rMppph4bQILyJmW2sARU0qctlmzDMFzgefNVgtBrALZiTSCZuf7yRg4jSWtImsEzkCTTTRZ77dLJ1/pmGSYCzEAknI5e69bD8KPuJbQtPCJra5jkuVvhSQ43DRXb5UnJEy4suq9B/jS9jS5r61iDwmNCvI8S7hJixEVM/OwXqva5mGzhk4bgDcmTH3CDQfdovM8UwHicKAGI056rHFJL16b5bcse725GNlaOw7RpsskyV6q8csnsEpShBVQwUkIQ26vEOEAC3MX7K5VTzJUgLOM1Gs8vLLZgbKmSSM7d0RhkgyLhX4c1nMCfWM0ypjO46Htf9jXERJfEWmJOpmPRdL/qjmw0knhEC7Y0LaCKHSVkHM/yOmoHCKi8EcQBFua7PB/TmYg43v4GS1sSAQC7hkl2gqSvLnljJvOdfj5e7CZdzC9/n4eNx0JJvFLmm63w3M4bEHheSdST9o5wNl2fVRgN4f8ACJvJLgbDTzF7wuXHY+HSQAxrGkSK/wDVrddSumOUyxl1rf1ccsbjbLd6+nbjLrJ4TgDJFNPha47HN4Q6bAgG0Ok053WOHE1su3uPPqzJ1fUXtc/ia0NBime/EDnMqcNxAqJB3ypcWIXO4wc6LV3iCSCQKR0FI5LPjrGSOnnu2321a1z2kAENEUrH3W2ErLCaWuBgQIJsaTBvmr8R4svk0FzuZ1OdI6dcWPdIINRbIisiNKlSY3Xa5ZTrT77wn0hsOfHAYhoIrWazYGMqrlZ9NdiuHE19y3jDWnhnN8AkRWCBmLVX0f8AwXw2LiYTcR5c5p4QJJJniZxuJMmSIggwBYLz/wDk3i2+HOH4jCAJBOG+XO4nBpcCy+QggxmCIiF8mTk87jO79X0ry4XH10+Y8RhOw2uYCHhk0q18SIdBrFcgAvBfjEgg51mTNoA8oHRe59S8S3HY/FIxGOofvfxh7Q7hbBgRBkRvMlfPEr6fDLrv38vmcuU316JCEwF6HEkJ8KSGlBu4Qk10c/RCLuEmwpFNoQntYfflCTCexWlVBXU1h/x5SSA0ZmTfbNYysjeEuW/tGUmKzUzPOb7yF3+G8GcQfzgVMExWOEVN8qDLSVz4rBxkD+IpEgGg9F9P9GHCGh5LGMY9zm2JEiKjP7JjPeSvNz8twx/j7erg4t2zL1HzLvAkOLXGIt9pd/sG14ZgSbrF5IYRcF95vwilLxVex9V+pN8RjfYAGEsa0uBLgGSaAnMmutLLgx2N/wAeG2QXF75EVADuETHmdfneGdsnlNW/H0cs8cd3xvTm8XRxaCCBFQIuJz5pYA2n+6e8I8Vicb3upVxNCSL5E1PmtPBeHD3NbxAFzuGu9jJoKwK86Lr6x7cp/LLpzvMknz5Sa+qla+IBDnB187ZwcvbJaMZx3PCLkkTnF+nVa8pJv4TwuVs+XMF0jDLml0tERc1JNqcs7CEsbCAcYsNx8KX0loNJsaE+Sm9+l8LjuV+h/wDCvr+Hh4D8JuIBjF3EwcPCXS+X8Rky7ha2k2iLLx/+W+Na1+PgOPHPiC8EH+A4SQKX/m6l6CuS+PIhILj/AOeeflv9N3l/j46e7i+JDvDYZ4CWtnDeRSC8h1MuI8MwdyvEfGQSDjbJDiu2OPi427JNhqkgLaT2tyhMGEiot7EITlJU6CbTCSJRAV2eHeONpPEQwFxGzRIjz91yNvVdXhg3hxHE1AAABq6ZJ8vtC55+nXi3v/vhqwf5X1Ny0SAASC8N5Cmui08ficb3h7zcznJBkUAAuTXIT58OHNI1OgqBqeYXsn6E7/8AOccirHEOEzZ0DUOysTMzaq45XHCy5X7R3xuWeNknfu15Xh8FpeWudDRxEnlSQJEnai3fhQMGaE4TnVpdz+GNSSPbKqXgPCHEa9wc1vAwuMzWtA2AdPRYDxRkEtDoYGNn/WCCCLVuKzc7LfeWVkvpjUxxls9ud9zzK6vA+K4C2wIdxB/+wgEAcpNlyFX/AI6TPoV1slmq4Y2zLcTNzuvfdjtLODCaA7+LiGyXA8PCSBeHDKauJXgRRa4DyCDoMvlc+Xj8tX6O3By+Fs+r1n4Adx1tBH+rnEiJ4QJM30FVw4eFLXv4x9nB9sQXAkgxa2fNLH8fJdwNDA7JukzFZ71XLjPLjJ9gPZYwwy13068vLhe52eO8OcSBA08lACSF6JNdPHct3dMXvtPokhCqBAQhASgoQgEIQiBCEIG0qwCGz8j0CzTlSxqXTbBeWkOpY5A3oZBtdesPrBbgHCl5DvuIa8NZWpBaBfigxZeEhc8+LHPW56duP+oy45qOjB8U9jXNYSOIBpjMAkkcqlYEylKF0mMl3Plyyzyskt6gWwxYAiKAjfzWKEs2mOVnoZLRmIBl3+FmEIS2dw5SQhUt2EIQiBCEIgQhCKEIQgEIQiBCEIBCEIBCEIBCEIBCEIBCEIoQhCAQhCAQhCIEIQihCEIBCEIP/9k=',
+        title:'Jaybird',
         p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'on',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE04A2fR3aUH4T1ApT6CJi7sMGe_645uWejQ&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Flume',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO0ICGoD5KPQPP7nklpKKTuskfGtCv7B9f0g&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'on',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_IJ6MIhYgRb945JZ9UykW66VHWzzbG5fSDA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Monica Vinader',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFNdnXZ23Yy6_FSMs2uZNaTXkpRl4Kdlrceg&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Drake Hotel Properties',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://c4.wallpaperflare.com/wallpaper/448/174/357/neon-4k-hd-best-for-desktop-wallpaper-preview.jpg',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Chatbooks',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJcVyPW-Uy4kvsUF8wLXFEhs2nfuf3G1G8Q&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'GlamCorner',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb4DsmucLDMxCJmWxinP0H4mBJHojF3IWpyA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2pygi3ycBDmF9aQN9LHLidSRSrLHxmPqaRA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:`The Royal Children’s Hospital Foundation`,
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo4hX3LHHx3o1gW8-i8Q7xsG8zt7ln9uv_mA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF9WV8Cv__LdCNsHtdItX8MXx0F8J6AUCBmA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KTN_kVxc8uGpS_O_WBWj5dnqEfwfKX43Uw&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0YY-Mwy8EN3fVmA7d12bKCiQrcjL-MKM6GA&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6keDGW0lK97XcjaEOP3NPqFVALn3HpwX8eg&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTJPHB_gExAeZ4IR6JMWqWS7_IQ4Xdu8hejQ&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqpdWcVHbCwVTM-JbHFdmdEremBVkRIDVmQ&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI55qI-bt6vgofgbon6gmqZvQJeSQ7gugfDw&usqp=CAU',
+        title:'Jaybird',
+        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
     },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+    {   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQthtnxr6NOJqGNAGJ0rZbPzH9lu_lbRFK7mQ&usqp=CAU',
+    title:'Jaybird',
+    p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI55qI-bt6vgofgbon6gmqZvQJeSQ7gugfDw&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS94aPlGQXnsPpVrE_6d_MK2mgZrvN99XsgjA&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI55qI-bt6vgofgbon6gmqZvQJeSQ7gugfDw&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3xpTsKh2fI2DhN7AFnhY5xjOGLdFPjJ_rQ&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfBt0i5qwp8NVk00yrOyf6WPD5xilFjFZUzA&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7BmlXfIYawnbuiuoZpiP2Yq_SM4ubwKgKMg&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBHM6oUT_Q6zkWxsPkPy1w8qp3KTNpJGVBpQ&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    {
-        img: 'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1-269x389.jpg',
-        inner_img:'https://www.campaignmonitor.com/wp-content/uploads/2017/02/jaybird_v1.jpg',
-        title:'Birchbox',
-        p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.'
-
-    },
-    
+},
 ]
 console.log(cards_data)
 function data_append(){
@@ -638,11 +147,9 @@ function data_append(){
         let div = document.createElement("div")
 
 
-        let img = document.createElement("image")
+        let img = document.createElement("img")
         img.src = el.img;
-        let title = document.createElement("p")
-        title.innerText = el.title
-        div.append(img,title);
+        div.append(img);
 
         cont.append(div)
         
