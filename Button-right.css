@@ -1,0 +1,135 @@
+*{
+    font-family: sans-serif;
+   }
+   #main{
+     display: flex;
+     width: 100%;
+     height: auto;
+     /* border: 1px solid red; */
+   }
+   #main>div{
+       width: 55%;
+       height: 900px;
+       margin: auto;
+       /* border: 1px solid blue; */
+   }
+   .headline h1{
+       font-size:60px;
+       margin-left: 70px;
+   }
+   .headline p{
+       font-size:27px;
+       text-align: center;
+       margin-right: 0px;
+   }
+   .headline img{
+       width:30%;
+       height: 50px;
+       display: block;
+       margin: auto;
+       margin-left:18%;
+   }
+   #form img{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+       -webkit-transform: scale(1.0);
+       transform: scale(1.0);
+   }
+   #form{
+     width: 100%;
+     height: auto;
+     padding: 50px;
+     margin-left: 50px;
+     margin-top: -50px;
+   }
+   #name{
+    margin-top: 20px;
+    width: 240px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+   }
+   #last{
+    margin-top: 20px;
+    width: 240px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+   }
+   #email{
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+   }
+   #company{
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+   }
+   #no{
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+   }
+
+   #btn{
+    margin-top: 20px;
+    width: 500px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: rgb(119, 12, 219);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   }
+   #btn:hover, #btn:focus, #btn:active{
+       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+       -webkit-transform: scale(1.1);
+       transform: scale(1.1);
+   }
+   input:hover{
+       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+       -webkit-transform: scale(1.0);
+       transform: scale(1.0);
+   }
+   #under{
+       text-align: center;
+       font-size:small;
+       margin-right: 30%;
+   }
+   #call{
+       text-align: center;
+       font-size:small;
+       margin-right:35%; 
+   }
+   #text1{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       gap: 10px; 
+   }
+   #text1>div{
+     margin-top: 90px;
+   }
+   #text1>div>img{
+      margin-left: 120PX;
+   }
+   #logo{
+    width: 20%;
+    height: 50px;
+    display: flex;
+    gap: 50px;
+    margin: auto;
+    margin-left:15%;
+   }
+   #logo>div>img{
+   margin: auto;
+   padding: 10px;
+   }
+

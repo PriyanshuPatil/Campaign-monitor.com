@@ -1,0 +1,212 @@
+  *{
+    font-family: sans-serif;
+  }
+
+  #box-1 {
+    text-align: center;
+  }
+  #box-1 >h1{
+    font-size: 60px;
+  }
+  #box-1 > p {
+    font-size: 20px;
+  }
+  #btn-left > a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #btn-right > a {
+    color: #111324;
+    text-decoration: none;
+  }
+  #btn-left {
+    background-color: #7856ff;
+    padding: 25px 45px;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    border-radius: 3px;
+    border: #7856ff;
+    font-weight: 500;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  #btn-right {
+    padding: 25px 45px;
+    background: #51cfdb;
+    margin: 10px 20px;
+    border-radius: 3px;
+    border: #51cfdb;
+    font-weight: 500;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+
+  /* price range */
+
+  .but3{
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Graphik Web', Helvetica, sans-serif;
+}
+.but3 button{
+    width: 100px;
+    height: 50px;
+    background-color: #7856FF;
+    color: white;
+    font-weight:bolder;
+    font-size: 38PX;
+    text-align: center;
+    border-radius: 3px; 
+}
+
+.bottom{
+    width: 800px;
+    height: 10px;
+    background-color: whitesmoke;
+    margin-right: 20px;
+    float: left;
+
+}
+
+input {
+display: block;
+width: 200px;
+margin: auto;
+}
+
+output {
+text-align: center;
+display: block;
+padding-top: 10px;
+font-size: 20px;
+font-family: 'Graphik Web', Helvetica, sans-serif;
+}
+
+
+
+.bottom {
+    float: left;
+    margin-left: 120px;
+    margin-top: 30px;
+    margin-bottom: 90px;
+
+
+}
+.max{
+    font-weight: bolder;
+    color:#7856FF;
+    font-family: 'Graphik Web', Helvetica, sans-serif;
+    padding-top: 27px;
+    float: left;
+
+}
+.moree{
+    float: left;
+    
+}
+#bottom{
+    margin-top: 90px;
+    margin-left: 160px;
+}
+
+
+
+
+/* pricing card */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+  }
+  #price{
+    display: block;
+    margin:auto;
+    margin-left: 20%;
+    margin-bottom:50px;
+  }
+  .container{
+  width: 810px;
+  height: 310px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  }
+  .card{
+  padding: 20px;
+  text-align: center;
+  box-shadow: 7px 7px 25px rgba(31, 31, 31, 0.199);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: all .6s ease;
+  }
+  .card:hover{
+  transform: scale(1.12);
+  }
+  .card::after{
+  content: " ";
+  position: absolute;
+  width: 360px;
+  height: 90px;
+  top: -20px;
+  left: -20px;
+  transform: rotate(-3deg);
+  }
+  .card:nth-child(1)::after{
+  background: linear-gradient(to right, #7e14f7, #ad20ff);
+  }
+  .card:nth-child(2)::after{
+  background: linear-gradient(to right, #7e14f7, #ad20ff);
+  }
+  .card:nth-child(3)::after{
+  background: linear-gradient(to right, #7e14f7, #ad20ff);
+  }
+  .wraper{
+  position: relative;
+  z-index: 1;
+  }
+  .wraper h2{
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 36px;
+  }
+  .wraper h3{
+  font-size: 22px;
+  margin-bottom: 8px;
+  }
+  .wraper p{
+  font-size: 15px;
+  line-height: 26px;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 20px;
+  }
+  #cardbtn{
+  padding: 9px 20px;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  }
+
+
+  /* feature
+   #channel{
+    width: 100%;
+   }
+  .features{
+    border-collapse: ;
+  }
+  .features__cell{
+    max-width: 250px;
+    font: size 0.9em;
+    font-weight: normal;
+    padding: 0.5em 1em;
+  }
+  .features__cell--bold{
+    font-weight: bold;
+  } */
