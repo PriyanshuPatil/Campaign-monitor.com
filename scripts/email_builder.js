@@ -1,5 +1,6 @@
 
-let getData = () => {
+let getData = (event) => {
+    event.preventDefault();
     //let data = JSON.parse(localStorage.getItem('email_data'));
     
 
@@ -21,12 +22,23 @@ let getData = () => {
     };
     if (count == false) {
         localStorage.setItem('email_data', JSON.stringify(obj)); 
-        window.location.href = '/email-done.html';
-         
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 2000
+        });
         //console.log('hi');     
     }
     else {
-        swal('Sorry !',' Please give each information to go to the next page.','warning'); 
+       
+        Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Please fill each information.',
+            showConfirmButton: true,
+        });
     };
     
    // console.log('hi');

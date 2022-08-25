@@ -47,13 +47,15 @@ data.forEach((ele) => {
     // email_div.style.backgroundImage = 'url('')';
 
     let btn = document.getElementById('btn');
-    btn.addEventListener('click', function () {
-        
-        Swal.fire(
-            'Hey its done !',
-            'Mail has been sent to ${ele.reciever_email}. Thank you!',
-            'success'
-        );
+    btn.addEventListener('click', function (event) {
+        event.preventDefault();
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Mail has been sent to ${ele.reciever_email}`,
+            showConfirmButton: false,
+            timer: 2500
+        });
     });
 
     
