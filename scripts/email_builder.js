@@ -27,7 +27,7 @@ let getData = (event) => {
             icon: 'success',
             title: 'Your work has been saved',
             showConfirmButton: false,
-            timer: 2000
+            timer: 6000
         });
         //console.log('hi');     
     }
