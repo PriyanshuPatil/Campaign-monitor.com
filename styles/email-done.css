@@ -7,7 +7,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./whatsapp.jpg);
+    background-image: url(./pics.jpeg);
     /* background-position: center; */
     /* background-size: cover; */
 }
@@ -20,8 +20,24 @@ body{
     text-align: center;
     color: rgb(110, 10, 118);
 }
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    line-height: 100px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/styles/images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 200px 0;
+    }
+}
 #email{
-    margin-top: 10%;
+    margin-top: 6%;
     width: 100%;
     height: auto;
     background-image: url(./moon.jpg);
@@ -29,6 +45,7 @@ body{
     background-size: cover;
     color: aliceblue;
     border-radius: 10px;
+    border: 1px solid white;
 }
 #email_things{
     padding: 50px;
@@ -42,7 +59,7 @@ button{
     margin-top: 50px;
     text-align: center;
     color: aliceblue;
-    background-color: rgba(0, 0, 255, 0.764);
+    background-color: rgba(0, 64, 255, 0.952);
     border-radius: 5px;
     width: 15%;
     border:none;
@@ -50,13 +67,14 @@ button{
     font-size: 15px;
     cursor: pointer;
     
+    
 }
 button:hover {
     margin: auto;
     margin-top: 50px;
     text-align: center;
     color: aliceblue;
-    background-color: rgb(10, 10, 157);
+    background-color: rgb(0, 115, 255);
     border-radius: 5px;
     width: 15%;
     border: none;

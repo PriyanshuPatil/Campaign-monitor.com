@@ -54,7 +54,7 @@ data.forEach((ele) => {
             icon: 'success',
             title: `Mail has been sent to ${ele.reciever_email}`,
             showConfirmButton: false,
-            timer: 2500
+            timer: 6000
         });
     });
 
