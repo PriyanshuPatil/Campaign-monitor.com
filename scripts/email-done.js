@@ -48,7 +48,12 @@ data.forEach((ele) => {
 
     let btn = document.getElementById('btn');
     btn.addEventListener('click', function () {
-        alert(`Your mail has been sent to ${ele.reciever_email}. Thank you!`);
+        
+        Swal.fire(
+            'Hey its done !',
+            'Mail has been sent to ${ele.reciever_email}. Thank you!',
+            'success'
+        );
     });
 
     
@@ -60,4 +65,5 @@ data.forEach((ele) => {
     div.append(sender, reciever,number, subject, message, name);
     
 });
+
 
