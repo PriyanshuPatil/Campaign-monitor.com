@@ -8,39 +8,56 @@
     <title>Document</title>
 </head>
 <body>
-<div id="main">
-    <div class="box1">
-        <h1>High Volume sending made easy</h1>
-        <p>Sophisticated email marketing features, rock-solid deliverability, and world-class support.</p>
-         <input  type="text"  id="name" placeholder="First Name">
-         <input  type="text"  id="last" placeholder="Last Name">
-         <input type="email" id="email" placeholder="Company Email Address">
-         <input type="text"  id="company" placeholder="Company Address">
-         <input type="number" id="no" placeholder="Number">
-         <input type="checkbox" id="box">
-         <span>Check this box to receive helpful marketing tips from Campaign Monitor.</span>
-         <button id="btn">Submit</button>
-         <span>Visit our Privacy Statement to learn more about how we process your data and your rights as a data subject. Visit our <u>Preference Center</u>  at any time to update your subscription settings or unsubscribe.</span>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7X2YqPps4Z1bOk_9o8dBHEgSHiPk-iadSQ&usqp=CAU" alt="">
-    </div>
-    <div id="container">
-        <div  id="right">
-             <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/james-t.png?ver=298" alt="">
-             <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/quote.png?ver=298" alt="">
-             <h3>Campaign Monitor helped us easily create beautiful emails that turned our Bombshell wetsuit into a global phenomenon.</h3>
-             <br>
-             <p>-James Tayler,</p>
-             <h2>Rip Curl Global Creative Director</h2>
+    <div id="main">
+        <div class="headline">
+            <h1>High Volume sending made easy</h1>
+            <p>Sophisticated email marketing features, rock-solid deliverability, and world-class support.</p>
+            <form id="form">
+                <input type="text" name="fname" id="name" placeholder="First Name">
+                <input type="text" name="lname" id="last" placeholder="Last Name">
+                <br>
+                <input type="email" name="email" id="email" placeholder="Company Email Address">
+                <br>
+                <input type="text" name="company" id="company" placeholder="Company Name">
+                <br>
+                <input type="number" name="" id="no" placeholder="Phone Number">
+                <br>
+                <button id="btn">Submit</button>
+                <p id="under">Visit our <u>Privacy Statement</u>to learn more about how we process your data and your rights as a data subject. Visit our <u>Preference Center</u>at any time to update your subscription settings or unsubscribe.</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7X2YqPps4Z1bOk_9o8dBHEgSHiPk-iadSQ&usqp=CAU" alt="">
+                <p id="call">or call <span>+-888-533-8098</span> to speak to sales directly</p>
+            </form>
         </div>
-        <div id="right1">
-            <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/james-t.png?ver=298" alt="">
-            <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/quote.png?ver=298" alt="">
-            <h3>Campaign Monitor helped us easily create beautiful emails that turned our Bombshell wetsuit into a global phenomenon.</h3>
-            <br>
-            <p>-James Tayler,</p>
-            <h2>Rip Curl Global Creative Director</h2>
-        </div>
+        <div id="text1">
+            <div>
+                <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/james-t.png?ver=298" alt="">
+            </div>
+            <div>
+                <h3>Campaign Monitor helped us easily create beautiful emails that turned our Bombshell wetsuit into a global phenomenon.</h3>
+                <h4>- James Taylor,</h4>
+                <h3>Rip Curl Global Creative Director</h3>
+            </div>
+            <div style="margin-top:-115px;">
+                <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/Mad_Paws_Karim.png?ver=298" alt="">
+            </div>
+            <div style="margin-top:-115px;">
+                <h3>We use Campaign Monitor to drive conversion and engagement, converting prospects into customers in less than 3 weeks.</h3>
+                <h4>- Karim Mouahbi,</h4>
+                <h3>Head of Marketing at Mad Paws</h3>
+            </div>
+        </div>   
     </div>
-</div>
+    <div id="logo">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/huffpo.png?ver=2981661421385047" alt="">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/ripcurl.png?ver=2981661421385048" alt="">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/topshop.png?ver=2981661421385048" alt="">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/unicef.png?ver=2981661421385048" alt="">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/adidas.png?ver=2981661421385114" alt="">
+        <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/showtime.png?ver=2981661421385114" alt="">
+        
+    </div>
 </body>
 </html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="Button-right.js"></script>
+
