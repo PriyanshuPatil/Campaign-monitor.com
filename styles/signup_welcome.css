@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(97, 97, 97);
+}
+
+#progress{
+    padding-bottom: 10px;
+}
+
+#progress>div{
+    width: 25%;
+    height: 10px;
+    background-color: rgb(93, 0, 255);
+}
+
+#logo{
+    width: 200px;
+    display: block;
+    margin: 70px auto;
+    
+}
+
+
+#welcome{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.text{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 10px auto 40px auto;
+    color: rgb(97, 97, 97);
+}
+
+#inner_container{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+#inner_container>div{
+    border: 1px solid rgb(223, 220, 220);
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button{
+    display:block;
+    margin-left: auto;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    /* background-color: rgb(93, 0, 255);
+    color: white; */
+}
+
+
+input[type='radio']{
+    width: 16px;
+    height: 16px;
+}
+
+#user{
+    text-transform: capitalize;
+}
+
