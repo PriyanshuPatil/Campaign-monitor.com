@@ -41,7 +41,11 @@ color:aquamarine ;
 #nav-mid>select{
 color:aquamarine ;
 }
-#nav-mid>div:hover {
+#nav-mid>div>a{
+  text-decoration: none;
+  color:aquamarine ;
+} 
+#nav-mid>div>a:hover {
 color:rgba(173, 170, 185, 0.959);
 } 
 #nav-mid>select:hover {
@@ -51,6 +55,9 @@ color:rgba(173, 170, 185, 0.959);
 display: flex;
 gap:25px;
 color: white;
+}
+#nav-button>button>a{
+text-decoration: none;
 }
 #nav-button>div{
 margin: auto;
@@ -79,4 +86,5 @@ background-color:rgb(203, 144, 203);
 #hello{
 width: 100;
 height: 3000px;
-background-color: green;   }
+background-color: green; 
+  }
