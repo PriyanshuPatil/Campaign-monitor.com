@@ -85,7 +85,7 @@ body{
     margin-left: 7%;
     gap: 20px;
     cursor: pointer;
-    
+    overflow: hidden;
 }
 .container2>.cards>div>img{
     width: 250px;
@@ -93,7 +93,8 @@ body{
     margin-bottom: 5px;
     
 }
-.container2>.cards>:nth-child(even):hover{
+/* .container2>.cards>:nth-child(even):hover{
     opacity: 0.5;
     background: rgb(1, 19, 61);
-}
+   
+} */
