@@ -5,11 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./navbar-before.css">
     <link rel="stylesheet" href="./styles/login.css">
+    
+
 </head>
 <body>
-    <h1>Login page</h1>
+    <div id="navbar_container"></div>
+    
+
+    <div id="login_container">
+        <h1 id="heading">Log In</h1>
+        <div id="inner-div">
+            <p>Email</p>
+            <input type="email" id="email" placeholder="Email">
+            <p>Password</p>
+            <input type="password" id="password" placeholder="Password">
+            <button id="login_btn">LOG IN</button>
+            <p>Can't remember your password?</p>
+        </div>
+
+        <div id="create_div">
+            <p id="create_account">CREATE A FREE ACCOUNT</p>
+            <p>Sign up a free account, and start sending campaigns for as litttle as $9/month.</p>
+        </div>
+    </div>
 </body>
 </html>
+<script type="module">
+ 
+    import navbarBefore from './components/navbar_before.js' ;
 
+    let container=document.getElementById("navbar_container") ;
+    container.innerHTML=navbarBefore() ;
+    
+
+    let nav_signup = document.querySelector('#nav-button>button');
+    nav_signup.innerText = 'Sign up';
+
+    nav_signup.addEventListener('click', ()=>{
+        window.location.href = "signup.html";
+    })
+   </script>
 <script src="./scripts/login.js"></script>

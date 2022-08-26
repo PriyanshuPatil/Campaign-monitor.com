@@ -1,0 +1,181 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+}
+
+
+/* navbar css  */
+
+#navbar_container{
+    background-color: #F9F9FA;
+    
+}
+
+#navbar{
+    width: 75%;
+    margin: auto;
+    background-color: #F9F9FA;
+    color: black;
+    font-size: 0.7rem;
+}
+
+#logo{
+    cursor: pointer;
+}
+#logo svg{
+    width: 150px;
+    height: fit-content;
+}
+
+#logo path{
+    fill: black;
+}
+
+#nav-mid, #features{
+    color:rgba(173, 170, 185, 0.959);
+    background-color: #F9F9FA;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+
+
+#nav-mid>div:hover,#nav-mid>select:hover, #nav-button>div>a:hover {
+    color:black;
+} 
+ 
+#nav-mid>select{
+    color:rgba(173, 170, 185, 0.959);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+ 
+
+#nav-button>div>a{
+    color:rgba(173, 170, 185, 0.959);
+}
+
+#nav-button>div{
+    margin: auto;
+    color:rgba(173, 170, 185, 0.959);
+}
+
+#nav-button>button{
+    background-color: #F9F9FA;
+    border: 1px solid rgba(173, 170, 185, 0.959);
+    color:rgba(173, 170, 185, 0.959);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    
+}
+
+#nav-button>button:hover {
+    background-color:rgb(5, 182, 52);
+    color: white;
+    
+}
+
+
+
+/* login css  */
+
+body{
+    background-color: #F9F9FA;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#login_container{
+    margin: 130px auto 100px auto;
+
+}
+
+#heading{
+    text-align: center;
+    font-size: 2.8rem;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-weight: 500;
+    color: #18527C;
+}
+
+#inner-div, #create_div{
+    width: 30%;
+    margin: 40px auto 40px auto;
+    padding: 30px;
+    box-shadow: 0.5px 1px 3px 1px rgb(179, 178, 178);
+}
+
+
+
+
+#inner-div{
+    box-shadow: 1px 0.5px 5px 0.1px rgb(188, 187, 187);
+    background-color: white;
+}
+
+
+#inner-div>input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+#inner-div>button{
+    width: 100%;
+    padding: 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #80BB35;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    border: none;
+}
+
+#inner-div>button:hover{
+    background-color: #659527;
+
+}
+
+#inner-div>button+p{
+    text-align: center;
+    margin: 40px auto 20px auto;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+
+#create_div{
+    text-align: center;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+#create_div:hover{
+    background-color: white;
+}
+
+#create_account{
+    font-size: 1.1rem;
+    color: rgb(5, 162, 230);
+    
+}
+
+#create_account:hover{
+    text-decoration: underline;
+}
+
+#create_account+p{
+    width: 80%;
+    margin: auto;
+    margin-top: 5px;
+    color: grey;
+}
+
