@@ -1,5 +1,6 @@
 let user_data = JSON.parse(localStorage.getItem('user_data')) || [];
 
+let login_data = JSON.parse(localStorage.getItem('login_data')) || [];
 
 class User{
     constructor(){
@@ -30,26 +31,47 @@ class User{
         let pwd_len = password.length;
 
         if(pwd_len<8){
+            alert('Password length should be >= 8');
             return false;
         }
 
         return true;
-
+        
     }
 
     signup(fullName, company, email, password){
+        if(fullName == "" || company == "" || email == "" || password == ""){
+            alert("Please fill all input fields!");
+            return;
+        }
+
+        
         this.fullName = fullName;
         this.company = company;
         this.email = email;
         this.password = password;
 
+        let isPresent = user_data.filter((e)=>{
+            return e.email == email;
+        });
+
+        if(isPresent.length != 0){
+            alert("User email is already present. Use another email to create an account.");
+            return;
+        }
         let isValidate = false;
 
-        isValidate = this.validateEmail(email) && this.validatePassword;
+        isValidate = this.validateEmail(email) && this.validatePassword(password);
+        if(isValidate==false)
+            return;
 
-        if(isValidate){
+        if(isValidate && isPresent.length == 0){
             user_data.push(this);
             localStorage.setItem('user_data', JSON.stringify(user_data));
+
+            login_data.pop();
+            login_data.push(user_data[user_data.length-1]);
+            localStorage.setItem('login_data', JSON.stringify(login_data));
             window.location.href = "signup_welcome.html";
 
         }
