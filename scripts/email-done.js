@@ -2,14 +2,17 @@
 let data = [];
 
 let previous_data = JSON.parse(localStorage.getItem('email_data'));
+let gallery = JSON.parse(localStorage.getItem('gallery'));
+let array = { ...previous_data, ...gallery };
+localStorage.setItem('complete_data', JSON.stringify(array));
+let getData = JSON.parse(localStorage.getItem('complete_data'));
+console.log('array',array);
+data.push(getData);
+console.log('data',data);
 
-data.push(previous_data);
-console.log(data);
-//let gallery = JSON.parse(localStorage.getItem('gallery'));
-// let array = {...data,...gallery};
-// localStorage.setItem('complete_data', JSON.stringify());
+// console.log(array);
 
-// let getData = JSON.parse(localStorage.getItem(''));
+
 
 
 
@@ -19,9 +22,17 @@ let div = document.getElementById('email_things');
 
 
 data.forEach((ele) => {
+    let big_div = document.getElementById('email');
+    big_div.style.backgroundImage = `url(${ele.img})`;
     let sender = document.createElement('p');
+    // console.log('hi');
+    // let hi = data.img;
+    // console.log(hi);
+    // console.log('bye');
+    
     sender.innerText ='From : '+ ele.your_email;
     sender.id = 'sender';
+    console.log(ele.your_email);
 
     let reciever = document.createElement('p');
     reciever.innerText ='To : '+ ele.reciever_email;
