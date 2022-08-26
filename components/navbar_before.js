@@ -23,20 +23,18 @@ function navbarBefore(){
            <option value="S">Integrations</option>
            <option value="S">Signup Forms</option>
        </select>
-       <div>Pricing</div>
-       <div>Resources</div>
-       <div>Customers</div>
-       <div>Gallery</div>
-       <div>Agencies</div>
+       <div> <a href="./pricing.html">Pricing</a></div>
+       <div> <a href="./signup.html">Resources</a></div>
+       <div> <a href="./signup.html">Customers</a></div>
+       <div> <a href="./gallery">Gallery</a></div>
+       <div> <a href="./signup.html">Agencies</a></div>
     </div>
 
     <div id="nav-button">
-          <div ><a href="./contact.html"> Contact Us</a></div>  
+          <div ><a href="./signup.html"> Contact Us</a></div>  
           <div> <a href="./login.html">Log in</a></div>
-         <button onclick="mycall()"> Try it free </button>
-   </div>
-    
-   
+         <button onclick="mycall()"><a href="./signup.html">  Try it free</a> </button>
+   </div>  
 </div>
 </div>`
 }

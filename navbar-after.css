@@ -54,7 +54,8 @@ color:aquamarine ;
 }
 #nav-button>button{
 margin: auto;
-padding: 5px 20px 5px 20px;
+padding: 5px 10px 5px 10px;
+/* width: 80px; */
 background-color: blue;
 font-size: 12px;
 border-radius: 30px;
@@ -62,6 +63,10 @@ font-weight: 500;
 font-weight: 400;
 color: white;
 
+}
+#nav-button>button>a{
+text-decoration: none;
+color: white;
 }
 #nav-button>div>a{
 margin: auto;
