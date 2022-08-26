@@ -97,10 +97,11 @@ body{
     margin-right: 100px;
     grid-template-columns: repeat(4,1fr);
     margin-left: 7%;
-    gap: 20px;
+    gap: 55px;
     cursor: pointer;
 }
 .container2>.cards>div{
+    width: auto;
     position: relative;
 }
 
