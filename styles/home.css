@@ -1,0 +1,385 @@
+#drive-result{
+width: 90%;
+height: auto;
+margin: auto;
+}
+#drive{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+#drive>div{
+    margin: auto;
+    display: grid;
+grid-template-columns: repeat(1,1fr);
+justify-content: space-between;
+}
+#drive2>img{
+    width: 100%;
+    height: 80%;
+    margin: auto;
+}
+#heading-drive{
+    width: 80%;
+    margin: auto;
+
+}
+#heading-drive>h1{
+   font-size: 50px;
+   font-weight: 500;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#heading-drive>p{
+    font-size: 19px;
+   font-weight: 450;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+ }
+#button-div{
+    width: 100%;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-left: -20px;
+}
+ #button-div>button{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+    padding: 20px 50px;
+    width: 240px;
+    border-radius: 2px;
+    background-color:#883ecd  ;
+    border: 0px;
+    font-size: 17px;
+    color:white;
+    border: 1px solid rgb(123, 123, 169);
+    font-weight: 500;
+}
+#button-div>button:nth-child(2){
+    background-color:white;
+    color:  #883ecd;
+}
+#button-div>button:nth-child(1):hover{
+    background-color:#887baa;
+    color:  white;
+ }
+#button-div>button:nth-child(2):hover{
+    background-color:#883ecd;
+    color:  white;
+ }
+
+ #powering{
+    background-color: rgb(224, 235, 231);
+    padding: 50px;
+    margin-top: 70px;
+ }
+ #powering>h2{
+    font-weight: 470;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ text-align: center;
+ }
+ #powering>div{
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+ }
+ #powering>div>img{
+    width: 60%;
+    margin: auto;
+ }
+
+ #drag-data{
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+ }
+ #drag-data>h3{
+  font-size: 15px;
+}
+#drag-data>p{
+    color: rgb(33, 134, 101);
+    font-size: 15px;
+}
+ #drag-drop>h1{
+  margin-top: 70px;
+ }
+ #drag-drop>h1{
+    text-align: center;
+    font-weight: 550;
+    font-size: 37px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ #drag-box{
+    width: 100%;
+    display: grid;
+    padding: 40px 0px;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    gap: 40px;
+    font-weight: 550;
+    margin-left: -30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ #drag-box>div{
+    width: 99%;
+    height: 600px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 0px;
+ }
+
+ #drag-image{
+    height: 30%;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+ #drag-image>img:nth-child(1){
+    width: 40%;
+    height: 100%;
+ }
+
+ #drag-image>img:nth-child(2){
+    width: 60%;
+    height: 100%;
+ }
+
+ #eager-button{
+ text-align: center;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ #eager-button>h2{
+  font-weight: 400;
+  font-size: 20px;
+    }   
+ #eager-button>button{
+    display: block;
+    margin: auto;
+    margin-top: 0px;
+    padding: 20px 35px;
+    border-radius: 2px;
+    background-color:#883ecd  ;
+    border: 0px;
+    font-size: 17px;
+    color:white;
+    border: 1px solid rgb(123, 123, 169);
+    font-weight: 700; 
+}
+#eager-button>button:hover{
+    background-color:#887baa;
+    color:  white;
+ }
+
+#sms-here{
+    margin: auto;
+    margin-top: 80px;
+    background-color:rgb(215, 253, 253);
+}
+#sms-div{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+}
+#sms-div>div{
+    display: flex;
+}
+#sms-div>div>img:nth-child(1){
+    height: 100%;
+    width: 100%;
+}
+#sms-div>div>img:nth-child(2){
+    height: 100%;
+    width: 60%;
+    margin-left: -600px;
+}
+#sms-data{
+    width: 60%;
+   margin-top: 100px;
+    margin-left: 100px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#sms-data>h1:nth-child(1){
+ margin-top: 20px;
+ 
+}
+#sms-data>h1:nth-child(2){
+    margin-top: -25px;
+    
+}
+#sms-data>h1:nth-child(3){
+ margin-top: -25px;
+    
+ }
+
+#sms-data>p{
+font-size: 22px;
+margin-top: 30px;
+}
+#sms-data>button{
+    display: block;
+  margin-top: 50px;
+    padding: 20px 35px;
+    border-radius: 2px;
+    background-color:#883ecd  ;
+    border: 0px;
+    font-size: 17px;
+    color:white;
+    border: 1px solid rgb(123, 123, 169);
+    font-weight: 700; 
+ }
+ #sms-data>button:hover{
+    background-color:#887baa;
+    color:  white;
+ }
+ 
+#cards{
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+    margin-left: -40px;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+}
+ #image-cards>img{
+    margin-left: 20px;
+    width: 29%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+
+
+ #cards-data-head{
+    width: 100%;
+    margin: auto;
+
+}
+#cards-data-head>h1{
+   font-size: 35px;
+   font-weight: 500;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#cards-data-head>p{
+    font-size: 17px;
+   font-weight: 450;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+ }
+#button-cards{
+    width: 60%;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+ #button-cards>button{
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+    padding: 20px 40px;
+    border-radius: 2px;
+    background-color:white ;
+    border: 0px;
+    font-size: 15px;
+    color:#883ecd ;
+    border: 1px solid rgb(123, 123, 169);
+    font-weight: 500;
+}
+
+#button-cards>button:hover{
+    background-color:#883ecd;
+    color:  white;
+ }
+
+ #face-card{
+    margin-top: 100px;
+    background-image: url(./ban-2.jpg);
+    background-position: center;
+    background-size: cover;  
+    height: 400px;
+    width: 100%;
+ }
+ #face-card>div{
+    margin-left: 100px;
+    color: white;
+    width: 52%;
+    padding-top: 80px;
+ }
+#face-head>h2{
+    font-size: 25px;
+    font-weight: 450;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#face-head>p{
+    font-size: 17px;
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ #button-face>button{
+    display: block;
+    margin-top: 30px;
+    padding: 20px 40px;
+    border-radius: 2px;
+    background-color:white ;
+    border: 0px;
+    font-size: 16px;
+    color:#883ecd ;
+    border: 1px solid white;
+    font-weight: 550;
+}
+
+#button-face>button:hover{
+    background-color: transparent;
+    color:  white;
+ }
+
+#chart-data-head{
+    width: 70%;
+    margin: auto;
+
+}
+#chart-data-head>h1{
+   font-size: 35px;
+   font-weight: 500;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#chart-data-head>p{
+    font-size: 17px;
+   font-weight: 450;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+ }
+#last-home{
+    padding: 140px 30px 90px 30px;
+}
+#last-home>div{
+width: 90%;
+margin: auto;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 50px;
+}
+#last-home>div>div>img{
+    width: 90%;
+   height: 100%;
+}
+ 
+ #face-card2{
+    margin-top: 100px;
+    background-image: url(./ban-1.jpg);
+    background-position: center;
+    background-size: cover;  
+    height: 400px;
+    width: 100%;
+ }
+ #face-card2>div{
+    margin-left: 100px;
+    color: white;
+    width: 52%;
+    padding-top: 80px;
+ }
