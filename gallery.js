@@ -139,12 +139,34 @@ title:'Jaybird',
 p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
 
 },
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBHM6oUT_Q6zkWxsPkPy1w8qp3KTNpJGVBpQ&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
+
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBHM6oUT_Q6zkWxsPkPy1w8qp3KTNpJGVBpQ&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
+
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBHM6oUT_Q6zkWxsPkPy1w8qp3KTNpJGVBpQ&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
+
+},
+{   img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTupyUZRC33iEOs0e_krhENPhIVRYV_zvFA1A&usqp=CAU',
+title:'Jaybird',
+p:'Jaybird’s has the industry’s best bluetooth sports headphones and earbuds. Jaybird uses email marketing to announce new products and accessories. Here, with Campaign Monitor, they revealed their revolutionary X2 earbuds.',
+
+},
+
 ]
 console.log(cards_data)
 function data_append(){
     let cont = document.querySelector(".cards")
     cards_data.forEach(function(el){
         let div = document.createElement("div")
+        // div.setAttribute("class","cards1")
 
 
         let img = document.createElement("img")
@@ -152,7 +174,13 @@ function data_append(){
         div.append(img);
 
         cont.append(div)
-        
+        div.addEventListener("click",function(){
+            location.href="template.html"
+            itemLS(el);
+        })
     })
 }
 data_append()
+let itemLS = (item_data)=>{
+localStorage.setItem("gallery",JSON.stringify(item_data))
+}
