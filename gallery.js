@@ -231,7 +231,13 @@ function data_append(){
 
         let img = document.createElement("img")
         img.src = el.img;
-        div.append(img);
+        let div1 = document.createElement("div");
+        div1.setAttribute("class","overlay")
+        let title = document.createElement("p")
+        title.setAttribute("class","text")
+        title.innerText = el.title;
+        div1.append(title)
+        div.append(img,div1);
 
         cont.append(div)
         div.addEventListener("click",function(){
