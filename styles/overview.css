@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Graphik Web',Helvetica,sans-serif;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#view_plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1rem;
+    background-color: #EAEEFB;
+    gap: 4px;
+    
+}
+#view_plans_tag{
+    color: #434D5D;
+}
+
+#view_plans_tag:hover{
+    text-decoration: none;
+    color: rgb(92, 90, 90);
+}
+.fa-circle-info{
+    margin-right: 15px;
+    font-size: 1.5rem;
+    
+}
+i+p{
+    font-weight: bold;
+}
+
+#view_plans p:nth-child(3){
+    color: rgb(92, 90, 90);
+}
+
+#overview-container{
+    margin-top: 50px;
+}
+
+#inner-container{
+    width: 60%;
+    margin: auto;
+
+}
+
+h1{
+    color: #434D5D;
+    font-size: 1.9rem;
+}
+
+p{
+    color: rgb(92, 90, 90);
+}
+.p_tag{
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+
+.top-section{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.top-section>div{
+    width: 48%;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 5px;
+    text-align: center;
+    padding: 45px;
+}
+
+.top-section>div>div{
+    /* border: 1px solid red; */
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* background-color: #63B1F9; */
+}
+
+.fa-telegram{
+    font-size: 5rem;
+    color: #63B1F9;
+}
+
+.fa-user-group{
+    font-size: 1.8rem;
+    background-color: #63B1F9;
+    color: white;
+}
+
+#user-group{
+    background-color: #63B1F9;
+}
+
+h2{
+    margin-top: 50px;
+    color: #434D5D;
+}
+
+.text{
+    margin-top: 13px;
+    line-height: 25px;
+}
+
+button{
+    padding: 10px 15px;
+    color: #434D5D;
+    background-color: white;
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #F9F9FA;
+}
+h3{
+    color: #434D5D;
+}
+
+.bottom-divs{
+    border: 1px solid rgb(186, 184, 184);
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 40px;
+}
+
+a{
+    color: grey;
+}
+
+#skip{
+    display: block;
+    text-align: center;
+    margin-bottom: 70px;
+}

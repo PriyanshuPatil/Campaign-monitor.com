@@ -5,8 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting Started</title>
+    <link rel="stylesheet" href="./navbar-after.css">
+    <link rel="stylesheet" href="./styles/overview.css">
+    <script src="https://kit.fontawesome.com/21f8e7ded6.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <h1>Hello</h1>
+    <div id="navbar_container"></div>
+    
+    <div id="view_plans">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>You're on a free trial and can send campaigns to up to 5 people.</p>
+        <p><a href="pricing.html" id="view_plans_tag">View plans</a> to increase your limit and unlock additional features.</p>
+    </div>
+
+    <div id="overview-container">
+        <div id="inner-container">
+            <h1>Hey <span id="user"></span>, let's get started.</h1>
+            <p class="p_tag">Start with one of these</p>
+            <!-- <div >
+                <p>Get 50% off your first month on any monthly plan.</p>
+                <p>Offer expires in 3h 25m. View you discount <a href="">here</a>.</p>
+            </div> -->
+
+            <div class="top-section">
+                <div>
+                    <div>
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <h2>Send your first email</h2>
+                    <p class="text">Discover how easy it is to design and send beautiful emails.</p>
+                    <button id="create_compaign">Create a campaign</button>
+                </div>
+                <div>
+                    <div id="user-group">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h2>Build your list</h2>
+                    <p class="text">Import your subscribers into lists and get sending.</p>
+                    <button>Create your first list</button>
+                </div>
+            </div>
+
+            <h2>or try these</h2>
+
+            <div class="bottom-divs">
+                <h3>Add your brand</h3>
+                <p class="text">Create simple, on-brand email tempates that you can send to your subscribers.</p>
+                <button id="select_template">Select a template</button>
+            </div>
+
+            <div class="bottom-divs">
+                <h3>Confirm your email address <span id="add_email"></span></h3>
+                <p class="text">To complete the signup process, click the link in the email we sent you.</p>
+                <button>Resend verification email</button>
+                <a href="">Change email address</a>
+            </div>
+
+            <div class="bottom-divs">
+                <h3>Choose the plan that's right for you</h3>
+                <p class="text">Our core features start from just $4.50/month</p>
+                <button id="choose_plan">Choose a plan</button>
+            </div>
+
+            <a id="skip" href="">Skip</a>
+        </div>
+    </div>
 </body>
 </html>
+<script type="module">
+    import navbar_After from './components/navbar_after.js' ;
+    let container=document.getElementById("navbar_container") ;
+    container.innerHTML=navbar_After() ;
+    
+
+   </script>
+<script src="./scripts/overview.js"></script>
