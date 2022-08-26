@@ -78,7 +78,20 @@ body{
     color: #fff;
     border-radius: 40px;
 }
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
 .container2>.cards{
+    
     display: grid;
     margin: auto;
     margin-right: 100px;
@@ -86,8 +99,30 @@ body{
     margin-left: 7%;
     gap: 20px;
     cursor: pointer;
-    overflow: hidden;
 }
+.container2>.cards>div{
+    position: relative;
+}
+
+.container2>.cards>div:hover:nth-child(even) .overlay{
+    opacity: 0.8;
+}
+.container2>.cards>div:hover:nth-child(odd) .overlay{
+    opacity: 0.8;
+    background-color: rgb(252, 81, 107);
+}
+.text {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    position: absolute;
+    font-weight: bolder;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 .container2>.cards>div>img{
     width: 250px;
     height: 350px;
