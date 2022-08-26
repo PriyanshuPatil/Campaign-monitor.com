@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./styles/email_builder.css">
     <script src="https://kit.fontawesome.com/8c2f4761e6.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./navbar-after.css">
 </head>
 <body>
+    <div id="navbar_container"></div>
 
     <div class="email-builder">
 
@@ -54,3 +56,9 @@
 </html>
 <script src="./scripts/email_builder.js"></script>
 <!-- onclick="debounce(getData,5000)" -->
+<script type="module">
+ import navbar_After from './components/navbar_after.js' ;
+ let container=document.getElementById("navbar_container") ;
+ container.innerHTML=navbar_After() ;
+ console.log(container)
+</script>

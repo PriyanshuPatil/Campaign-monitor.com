@@ -53,6 +53,11 @@ h1{
     padding-bottom: 80px;
     display: grid;
     gap:    10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+#subject{
+    font-style: italic;
 }
 button{
     margin: auto;

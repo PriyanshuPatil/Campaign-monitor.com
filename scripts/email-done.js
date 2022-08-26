@@ -5,8 +5,8 @@ let previous_data = JSON.parse(localStorage.getItem('email_data'));
 
 data.push(previous_data);
 console.log(data);
-//let img_data = JSON.parse(localStorage.getItem(''));
-// let array = {...data,...img_data};
+//let gallery = JSON.parse(localStorage.getItem('gallery'));
+// let array = {...data,...gallery};
 // localStorage.setItem('complete_data', JSON.stringify());
 
 // let getData = JSON.parse(localStorage.getItem(''));
@@ -30,6 +30,7 @@ data.forEach((ele) => {
     let subject = document.createElement('h3');
     subject.innerText ='Subject : '+ ele.subject;
     subject.id = 'subject';
+    
 
     let name = document.createElement('p');
     name.innerText ='Thanks and Regards,'+'\n'+'\n'+ ele.name;
