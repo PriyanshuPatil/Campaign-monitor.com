@@ -20,6 +20,9 @@ function append_data(el){
 
     let btn1 = document.createElement("button")
     btn1.innerText = "Lets Get Started"
+    btn1.addEventListener("click",function(){
+        location.href="signup.html"
+    })
 
     let btn2  = document.createElement("button")
     btn2.innerText = "See their Story"
