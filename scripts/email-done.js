@@ -6,7 +6,7 @@ let previous_data = JSON.parse(localStorage.getItem('email_data'));
 data.push(previous_data);
 console.log(data);
 //let img_data = JSON.parse(localStorage.getItem(''));
-// let array = data.concat(img_data);
+// let array = {...data,...img_data};
 // localStorage.setItem('complete_data', JSON.stringify());
 
 // let getData = JSON.parse(localStorage.getItem(''));
