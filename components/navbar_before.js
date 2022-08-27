@@ -26,7 +26,7 @@ function navbarBefore(){
        <div> <a href="./pricing.html">Pricing</a></div>
        <div> <a href="./signup.html">Resources</a></div>
        <div> <a href="./signup.html">Customers</a></div>
-       <div> <a href="./gallery">Gallery</a></div>
+       <div> <a href="./gallery.html">Gallery</a></div>
        <div> <a href="./signup.html">Agencies</a></div>
     </div>
 
@@ -38,6 +38,7 @@ function navbarBefore(){
 </div>
 </div>`
 }
+
 
 
 
