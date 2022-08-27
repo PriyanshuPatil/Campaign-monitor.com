@@ -56,4 +56,3 @@ export default navbarAfter  ;
 
  // 3 :------copy paste in script file
 
-{/**/}
