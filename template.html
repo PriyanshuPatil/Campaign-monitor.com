@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./navbar-before.css">
+    <link rel="stylesheet" href="./navbar-after.css">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="template.css">
     <title>Template</title>
@@ -24,12 +24,24 @@
 </html>
 <script src="template.js"></script>
 <script type="module">
- 
-    import navbarBefore from './components/navbar_before.js' ;
+    import navbar_After from './components/navbar_after.js' ;
     let container=document.getElementById("navbar_container") ;
-    container.innerHTML=navbarBefore() ;
-    console.log(container)
-   </script>
+    container.innerHTML=navbar_After() ;
+let user_name = document.querySelector('#user-name');
+let user_data = JSON.parse(localStorage.getItem('user_data')) ;
+if(user_data.length>=1){
+    let user=user_data[user_data.length-1] ;
+user_name.innerHTML=user.fullName  ;
+}
+let nav_butt = document.querySelector('#nav-button>button');
+ nav_butt.addEventListener('click', ()=>{
+        window.location.href = "Pricing.html";
+ })
+ let overview = document.querySelector('#logo');
+ overview.addEventListener('click', ()=>{
+        window.location.href = "overview.html";
+ })
+</script>
    <script type="module">
     import Footer from './components/footer.js' ;
     let footer_container=document.getElementById("footer_container") ;
