@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Button-right.css">
+    <link rel="stylesheet" href="./navbar-before.css">
+    <link rel="stylesheet" href="./footer.css">
     <title>Document</title>
 </head>
 <body>
+    <div id="navbar_container"></div>
+    
+    <!-- <div id="data" style="width:100%"> -->
     <div id="main">
         <div class="headline">
             <h1>High Volume sending made easy</h1>
-            <p>Sophisticated email marketing features, rock-solid deliverability, and world-class support.</p>
+            <p>Sophisticated email marketing features, rock-solid deliverability, and <br> world-class support.</p>
             <form id="form">
                 <input type="text" name="fname" id="name" placeholder="First Name">
                 <input type="text" name="lname" id="last" placeholder="Last Name">
@@ -29,35 +34,57 @@
             </form>
         </div>
         <div id="text1">
-            <div>
-                <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/james-t.png?ver=298" alt="">
-            </div>
-            <div>
-                <h3>Campaign Monitor helped us easily create beautiful emails that turned our Bombshell wetsuit into a global phenomenon.</h3>
+           
+            <div id="text1_child1">
+                <div>
+                    <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/james-t.png?ver=298" alt="">
+                </div>
+                <div>
+                    <h3>Campaign Monitor helped us easily create beautiful emails that turned our Bombshell wetsuit into a global phenomenon.</h3>
                 <h4>- James Taylor,</h4>
-                <h3>Rip Curl Global Creative Director</h3>
+                <h3 style="color:rgb(134, 8, 237);">Rip Curl Global Creative Director</h3>
+                </div>
             </div>
-            <div style="margin-top:-115px;">
-                <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/Mad_Paws_Karim.png?ver=298" alt="">
-            </div>
-            <div style="margin-top:-115px;">
-                <h3>We use Campaign Monitor to drive conversion and engagement, converting prospects into customers in less than 3 weeks.</h3>
+            <div id="text1_child2">
+                <div>
+                    <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/demo/Mad_Paws_Karim.png?ver=298" alt="">
+                </div>
+                <div>
+                    <h3>We use Campaign Monitor to drive conversion and engagement, converting prospects into customers in less than 3 weeks.</h3>
                 <h4>- Karim Mouahbi,</h4>
-                <h3>Head of Marketing at Mad Paws</h3>
+                <h3 style="color:rgb(134, 8, 237);">Head of Marketing at Mad Paws</h3>
+                </div>
             </div>
         </div>   
     </div>
-    <div id="logo">
+
+    <div id="logo1">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/huffpo.png?ver=2981661421385047" alt="">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/ripcurl.png?ver=2981661421385048" alt="">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/topshop.png?ver=2981661421385048" alt="">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/unicef.png?ver=2981661421385048" alt="">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/adidas.png?ver=2981661421385114" alt="">
         <img src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/logo-strip/showtime.png?ver=2981661421385114" alt="">
-        
     </div>
+</div>
+<div id="footer_container"></div>
 </body>
 </html>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="Button-right.js"></script>
+ <script type="module">
+ 
+    import navbarBefore from './components/navbar_before.js' ;
+    let container=document.getElementById("navbar_container") ;
+    container.innerHTML=navbarBefore() ;
+    console.log(container)
+   </script>
+
+<script type="module">
+    import Footer from './components/footer.js' ;
+    let footer_container=document.getElementById("footer_container") ;
+    footer_container.innerHTML=Footer() ;
+    footer_console.log(container)
+   </script>
+   
 
