@@ -56,9 +56,4 @@ export default navbarAfter  ;
 
  // 3 :------copy paste in script file
 
-{/* <script type="module">
- import navbar_After from './components/navbar_after.js' ;
- let container=document.getElementById("navbar_container") ;
- container.innerHTML=navbar_After() ;
- console.log(container)
-</script> */}
+{/**/}

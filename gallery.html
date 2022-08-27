@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="gallery.css">
-    <link rel="stylesheet" href="./navbar-before.css">
+    <link rel="stylesheet" href="./navbar-after.css">
     <link rel="stylesheet" href="./footer.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class="container">
         <h1>Introducing the 97 top email <br> marketing campaign <br> examples and designs.</h1>
         <p>We’ve curated a selection of the most inspiring and effective email marketing campaigns sent.</p>
-       <button> <a href="signup.html">Get started for free</a></button>
+       <button> <a href="email_builder.html">Get started for free</a></button>
     </div>
     <div class="container2">
         <hr>
@@ -36,15 +36,34 @@
 </html>
 <script src="gallery.js"></script>
 <script type="module">
- 
-    import navbarBefore from './components/navbar_before.js' ;
+    import navbar_After from './components/navbar_after.js' ;
     let container=document.getElementById("navbar_container") ;
-    container.innerHTML=navbarBefore() ;
+    container.innerHTML=navbar_After() ;
     console.log(container)
-   </script>
+   </script> */}
+   
+   {/* <script type="module">
+       import navbar_After from './components/navbar_after.js' ;
+       let container=document.getElementById("navbar_container") ;
+       container.innerHTML=navbar_After() ;
+   let user_name = document.querySelector('#user-name');
+   let user_data = JSON.parse(localStorage.getItem('user_data')) ;
+   if(user_data.length>=1){
+       let user=user_data[user_data.length-1] ;
+   user_name.innerHTML=user.fullName  ;
+   }
+   let nav_butt = document.querySelector('#nav-button>button');
+    nav_butt.addEventListener('click', ()=>{
+           window.location.href = "Pricing.html";
+    })
+    let overview = document.querySelector('#logo');
+    overview.addEventListener('click', ()=>{
+           window.location.href = "overview.html";
+    })
+   </script> 
    <script type="module">
     import Footer from './components/footer.js' ;
     let footer_container=document.getElementById("footer_container") ;
-    footer_container.innerHTML=Footer() ;
+    footer_container.innerHTML=Footer();
     footer_console.log(container)
    </script>
