@@ -31,7 +31,7 @@ let user_name = document.querySelector('#user-name');
 let user_data = JSON.parse(localStorage.getItem('user_data')) ;
 if(user_data.length>=1){
     let user=user_data[user_data.length-1] ;
-user_name.innerHTML=user.fullName  ;
+user_name.innerHTML= `<a href="./logout.html">${user.fullName}</a>` ;
 }
 let nav_butt = document.querySelector('#nav-button>button');
  nav_butt.addEventListener('click', ()=>{
