@@ -48,7 +48,7 @@
     color:rgba(173, 170, 185, 0.959);
 }
 
-#nav-mid>div:hover,#nav-mid>select:hover, #nav-button>div>a:hover {
+#nav-mid>div:hover,#nav-mid>select:hover, #nav-button>div>a:hover, #nav-mid>div>a:hover {
     color:black;
 } 
  
