@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+}
+
+body{
+    background-image: url("https://image.shutterstock.com/image-vector/white-abstract-background-vector-art-260nw-600493232.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* backdrop-filter: blur(5px); */
+}
+#logo1{
+    width: 200px;
+    display: block;
+    margin: 70px auto;
+    
+}
+#logout_container{
+   margin-top: 130px;
+   border: 1px solid blue;
+   width: 30%;
+   margin: auto;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   padding: 60px;
+}
+#logout_container>p{
+    margin: auto;
+    text-align: center;
+}
+#logout_container>button{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 20px;
+    width: 150px;
+    border-radius: 2px;
+    background-color:#883ecd  ;
+    border: 0px;
+    font-size: 17px;
+    color:white;
+    border: 1px solid rgb(123, 123, 169);
+    font-weight: 500;
+}
+#logout_container>button:hover{
+    background-color:#887baa;
+    color:  white;
+ }
+.heading{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.text-margin{
+    margin: -20px 0px 20px 170px; 
+}
+
+.text{
+  
+    font-size:17px;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.privacy{
+    color: blue;
+    text-decoration: none;
+}
+
