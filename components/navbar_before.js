@@ -31,7 +31,7 @@ function navbarBefore(){
     </div>
 
     <div id="nav-button">
-          <div ><a href="./signup.html"> Contact Us</a></div>  
+          <div ><a href="./contact_us.html"> Contact Us</a></div>  
           <div> <a href="./login.html">Log in</a></div>
          <button onclick="mycall()"><a href="./signup.html">  Try it free</a> </button>
    </div>  
