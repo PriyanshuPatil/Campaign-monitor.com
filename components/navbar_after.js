@@ -8,7 +8,7 @@ function navbarAfter(){
                 </div>
                 <div> <a href="./overview">Overview</a></div>
               <div> <a href=""> Campaigns</a></div>
-              <div> <a href="">Automation</a> </div>
+              <div> <a href="./gallery.html">Gallery</a> </div>
               <div>  <a href="">Transactional</a></div>
               <div> <a href=""> Lists & subscribers</a></div>
               <div>  <a href="">Insights</a></div>
@@ -25,6 +25,7 @@ function navbarAfter(){
       </div>
         `
 }
+
 
 
 
