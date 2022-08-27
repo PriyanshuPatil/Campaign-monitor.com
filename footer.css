@@ -70,6 +70,10 @@ font-size: 11px;
 #footer-part-2>div{
     margin: auto;
 }
+#footer-part-12>dl>dd:hover {
+    color:rgba(173, 170, 185, 0.959);
+    } 
+    
 #get-content{
     padding: 20px;
     border-radius: 6px;
