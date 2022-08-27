@@ -37,7 +37,8 @@ let getData = (event) => {
             position: 'center',
             icon: 'warning',
             title: 'Please fill each information.',
-            showConfirmButton: true,
+            showConfirmButton: false,
+            timer: 6000
         });
     };
     
