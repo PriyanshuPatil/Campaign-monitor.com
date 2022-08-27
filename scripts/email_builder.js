@@ -46,7 +46,7 @@ let getData = (event) => {
 };
 
 let nextPage = () => {
-    window.location.href = '/email-done.html';
+    window.location.href = 'email-done.html';
 };
 
 
