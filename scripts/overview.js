@@ -25,5 +25,5 @@ select_template.addEventListener('click', ()=>{
 
 let choose_plan = document.getElementById('choose_plan');
 choose_plan.addEventListener('click', ()=>{
-    window.location.href = "pricing.html";
+    window.location.href = "Pricing.html";
 })
