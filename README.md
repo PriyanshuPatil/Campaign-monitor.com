@@ -28,9 +28,3 @@ Campaign monitor provides lots of functionality for marketing team to save time 
  ### Pricing Page:
  - Detailed description of Choose the plan that's right for your brand.
  <img width="929" alt="Screenshot (640)" src="https://miro.medium.com/max/875/1*eXzvRqCPtJxuN0dsujv8bA.png">
-
-
- 
- ### Blog Page:
- - Latest News, recent posts and instagram feed about the Campaign monitor has been displayed.
- 
