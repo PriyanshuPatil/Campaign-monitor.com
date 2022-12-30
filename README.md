@@ -34,13 +34,3 @@ Campaign monitor provides lots of functionality for marketing team to save time 
  ### Blog Page:
  - Latest News, recent posts and instagram feed about the Campaign monitor has been displayed.
  
- ### Sign Up & Sign In Pages:
- - The registration page uses local Storage for successful login.
- <img width="753" alt="Screenshot (641)" src="assets/sign_up.png">
- <img width="753" alt="Screenshot (641)" src="assets/login_1.png">
-
-
- ### Contact Page:
- - The basic information is taken from the customer and the acknowledment slip is displayed using modal. 
- <img width="598" alt="Screenshot (644)" src="assets/contact (2).png">
- 
