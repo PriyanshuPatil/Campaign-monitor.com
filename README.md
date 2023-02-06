@@ -1,5 +1,4 @@
 # native-order-609
-Campaign Monitor enables you to use automated emails for a variety of messages including welcoming a customer, sending someone a reminder about an upcoming event. Sending automated emails can increase engagement, build relationships with your subscribers, and drive results.
 Team Project ( https://www.campaignmonitor.com )
 
 # Campaign Monitor
