@@ -30,4 +30,4 @@ Campaign monitor provides lots of functionality for marketing team to save time 
  <img width="929" alt="Screenshot (640)" src="https://miro.medium.com/max/875/1*eXzvRqCPtJxuN0dsujv8bA.png">
 
 ## Deployed Link
-<a href="https://incandescent-dusk-dc6fe6.netlify.app/home.html">campaignmonitor.netlify.app</a>
+<a href="https://incandescent-dusk-dc6fe6.netlify.app/home.html">campaign_monitor.netlify.app</a>
